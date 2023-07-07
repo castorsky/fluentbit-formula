@@ -3,6 +3,8 @@
 
 fluent_bit:
   pkg: fluent-bit
+  repo:
+    keyring: '/usr/share/keyrings/fluentbit-keyring.gpg'
   service:
     unit: '/lib/systemd/system/fluent-bit.service'
     conf: '/etc/td-agent-bit/fluent-bit.conf'

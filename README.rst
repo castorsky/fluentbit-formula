@@ -36,18 +36,32 @@ Configures the fluent-bit service with upstart/systemd etc
 Configures fluent-bit input/output plugins
 
 
+``fluent-bit.repo``
+--------------------
+
+Configures the Fluent Bit repository to install packages from.
+Currently works with Debian/Ubuntu and RedHat family (RHEL, CentOS, Rocky, Alma, etc.).
+
+
+``fluent-bit.repo.clean``
+--------------------
+
+Removes the Fluent Bit repository from repositories list.
+
+
 TODO:
 ================
 
-- Add repository install
+- Expand repository install to support all distributions available in official repository.
 - Prepare next gen with (will break old format):
-    ``
-    bit:
-      fluent-bit:
-        config:
-          flush: 5
-    bit:
-      td-agent-bit:
-        config:
-          flush: 5
-     ``
+
+.. code-block::
+
+        bit:
+          fluent-bit:
+            config:
+              flush: 5
+        bit:
+          td-agent-bit:
+            config:
+              flush: 5
